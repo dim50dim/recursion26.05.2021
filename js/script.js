@@ -4,16 +4,16 @@
 
 //getFactorial(3) // в данном случае должна вернуть факториал числа 3! = 3 * 2 * 1
 
-function getFactorial(n){
+function fact(n){
     if (n === 1){
         return 1;
     }
     else{
          
-        return n * getFactorial(n - 1);
+        return n * fact(n - 1);
     }
 }
-let  result = getFactorial(3); 
+let  result = fact(3); 
 console.log(result); 
 
 //Task #2
@@ -25,10 +25,38 @@ console.log(result);
 // Степень передается как второй аргумент в функцию
 
 // pow(num, degree)
-
-function movePow(k, i){
- 
+function pow(x, n){
+    if(n === 1){
+        return x;
+    }else{
+        return x * pow(x,n - 1);
+    }
 }
+console.log(pow(3, 4));
 
-let barelyUndestand = movePow(5);
-  console.log(barelyUndestand);
+
+
+
+
+
+// HERE  we can use recursion instead of loop while
+let a = 1;
+
+function rec(){
+    a = a + 1;
+    console.log(a);
+    if(a > 11){
+        return a;
+    }
+    rec();
+   
+}
+rec();
+
+
+
+
+
+
+
+
